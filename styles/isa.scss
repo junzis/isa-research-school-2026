@@ -83,6 +83,11 @@ $link-color: #0076a8;
   color: var(--isa-navy);
 }
 
+.reveal #title-slide .subtitle a {
+  display: inline-block;
+  margin-top: 0.65rem;
+}
+
 .section-divider {
   background: white;
   color: var(--isa-blue);

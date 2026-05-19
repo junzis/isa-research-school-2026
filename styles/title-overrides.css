@@ -19,6 +19,11 @@
   margin-bottom: 3rem !important;
 }
 
+.reveal #title-slide .subtitle a {
+  display: inline-block;
+  margin-top: 0.65rem;
+}
+
 .isa-breadcrumb {
   align-items: center;
   bottom: 1.2rem;
