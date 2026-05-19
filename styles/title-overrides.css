@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,650;0,700;1,400;1,600&display=swap");
+
+.reveal {
+  font-family: "IBM Plex Sans", "Noto Sans", "Segoe UI", Helvetica, Arial, sans-serif !important;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: "IBM Plex Sans", "Noto Sans", "Segoe UI", Helvetica, Arial, sans-serif !important;
+}
+
+.reveal[data-navigation-mode=linear] .slides section#title-slide.title-slide h1.title {
+  font-size: 1.72em !important;
+  line-height: 1.08 !important;
+  margin-bottom: 3rem !important;
+}
+
+.isa-breadcrumb {
+  align-items: center;
+  bottom: 1.2rem;
+  color: #8a97a4;
+  display: flex;
+  font-size: 0.34em;
+  gap: 0.32rem;
+  justify-content: center;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 1;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  z-index: 30;
+}
+
+.isa-breadcrumb.inactive {
+  opacity: 0.45;
+}
+
+.isa-breadcrumb-item {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.32rem;
+  white-space: nowrap;
+}
+
+.isa-breadcrumb-item:not(:last-child)::after {
+  color: #c2cbd2;
+  content: "/";
+  font-weight: 400;
+}
+
+.isa-breadcrumb-item.active {
+  color: var(--isa-blue);
+  font-weight: 700;
+}

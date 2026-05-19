@@ -1,0 +1,27 @@
+project:
+  type: default
+  render:
+    - lecture.qmd
+
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+
+format:
+  revealjs:
+    theme: [default, styles/isa.scss]
+    css: styles/title-overrides.css
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+    code-line-numbers: true
+    code-copy: true
+    width: 1600
+    height: 900
+    margin: 0.06
+    transition: fade
+    include-after-body: scripts/slide-body.js
+
+jupyter: isa-research-school

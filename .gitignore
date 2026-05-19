@@ -1,0 +1,29 @@
+# Python / uv local environment
+.venv/
+__pycache__/
+*.py[cod]
+
+# Quarto generated cache and execution artifacts
+.quarto/
+_freeze/
+*.quarto_ipynb
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*~
+.vscode/
+.idea/
+
+# Local logs / temporary files
+*.log
+tmp/
+temp/
+
+/.quarto/
+**/*.quarto_ipynb
+**/*.quarto_ipynb*
+

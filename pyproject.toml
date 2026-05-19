@@ -1,0 +1,29 @@
+[project]
+name = "isa-research-school"
+version = "0.1.0"
+description = "Quarto RevealJS lecture deck for the ISA Research School."
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "cartopy>=0.25",
+  "ipykernel>=6.29",
+  "jupyter>=1.1",
+  "lxml>=6.1.0",
+  "matplotlib>=3.8",
+  "numpy>=1.26",
+  "openap>=2.3",
+  "pandas>=2.2",
+  "pyarrow>=16",
+  "python-pptx>=1.0.2",
+  "seaborn>=0.13",
+]
+
+[project.optional-dependencies]
+live = [
+  "fastmeteo>=1.1",
+  "opentop>=2",
+  "pyopensky>=2",
+  "traffic>=2.12",
+]
+
+[tool.uv]
+package = false
