@@ -659,6 +659,7 @@ def objective(x, u, dt, **kwargs):
 :::{}
 | Resource | Link |
 |---|---|
+| Lecture repository | <https://github.com/junzis/isa-research-school-2026> |
 | OpenAP handbook | <https://openap.dev/> |
 | pyopensky | <https://mode-s.org/pyopensky/> |
 | fastmeteo | <https://github.com/open-aviation/fastmeteo> |
