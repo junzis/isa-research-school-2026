@@ -280,12 +280,15 @@ Trajectory objectives, constraints, and climate-aware routing
 
 ::: {.two-col}
 :::{.compact}
-- Dynamic models connect flight state to forces: drag, thrust, fuel flow, and mass.
-- Drag-polar coefficients can be recovered from open ADS-B trajectories with Bayesian/MCMC estimation.
-- Mass remains the hardest hidden state: it drives climb rate, fuel burn, and trajectory prediction.
-- Particle filters assimilate ADS-B climb-rate evolution with OpenAP dynamics.
-- New mass-estimation work uses the EUROCONTROL PRC Data Challenge 2024 dataset.
-- Paper: <https://doi.org/10.59490/joas.2025.8252>
+- Dynamic models connect flight state to drag, thrust, fuel flow, and mass.
+- Drag-polar coefficients can be estimated from open ADS-B trajectories.
+- Mass is the hardest hidden state: it drives climb, fuel burn, and prediction.
+- Particle filters combine ADS-B climb-rate evolution with OpenAP dynamics.
+- Recent work uses the EUROCONTROL PRC Data Challenge 2024 dataset.
+
+::: {.source}
+Paper: <https://doi.org/10.59490/joas.2025.8252>
+:::
 :::
 
 ![Particle filter for mass estimation during climb](assets/dfs_mass_estimation.png){.fit-img}
