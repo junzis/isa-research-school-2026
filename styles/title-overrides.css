@@ -24,6 +24,11 @@
   margin-top: 0.65rem;
 }
 
+.model-record {
+  font-size: 0.78em;
+  line-height: 1.18;
+}
+
 .isa-breadcrumb {
   align-items: center;
   bottom: 1.2rem;

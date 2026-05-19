@@ -308,7 +308,7 @@ aircraft = openap.prop.aircraft("A319")
 :::
 
 ::: {.column width="52%"}
-::: {.compact}
+::: {.compact .model-record}
 **A319 model record**
 
 - Aircraft: Airbus A319
