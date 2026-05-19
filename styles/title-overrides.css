@@ -29,6 +29,26 @@
   line-height: 1.18;
 }
 
+.stack-diagram {
+  font-size: 0.64em;
+  gap: 0.5rem;
+}
+
+.stack-layer {
+  min-height: 58px;
+  padding: 0.5rem 0.68rem;
+}
+
+.stack-layer strong {
+  margin-bottom: 0.18rem;
+}
+
+.stack-layer p {
+  font-size: 0.9em;
+  line-height: 1.2;
+  margin: 0;
+}
+
 .isa-breadcrumb {
   align-items: center;
   bottom: 1.2rem;

@@ -366,8 +366,8 @@ $link-color: #0076a8;
 
 .stack-diagram {
   display: grid;
-  font-size: 0.56em;
-  gap: 0.24rem;
+  font-size: 0.64em;
+  gap: 0.5rem;
 }
 
 .stack-layer {
@@ -377,20 +377,21 @@ $link-color: #0076a8;
   border-radius: 6px;
   display: grid;
   grid-template-columns: 1fr;
-  min-height: 44px;
-  padding: 0.34rem 0.55rem;
+  min-height: 58px;
+  padding: 0.5rem 0.68rem;
 }
 
 .stack-layer strong {
   color: var(--isa-navy);
   display: block;
-  margin-bottom: 0.12rem;
+  margin-bottom: 0.18rem;
 }
 
-.stack-layer span {
+.stack-layer p {
   color: #52606d;
-  font-size: 0.66em;
-  line-height: 1.16;
+  font-size: 0.9em;
+  line-height: 1.2;
+  margin: 0;
 }
 
 .code h2::after {
