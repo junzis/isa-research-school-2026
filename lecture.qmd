@@ -1,6 +1,6 @@
 ---
 title: "Leveraging Open Data and Models to Reduce Aviation's Climate Footprint"
-subtitle: "ISA Research School · May 2026"
+subtitle: "ISA Research School · May 2026<br><https://github.com/junzis/isa-research-school-2026>"
 author: "Junzi Sun · TU Delft"
 title-slide-attributes:
   class: title-slide
