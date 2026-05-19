@@ -6,8 +6,8 @@
 <script src="lecture_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="lecture_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="lecture_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="lecture_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.37">
+<link href="lecture_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="Junzi Sun · TU Delft">
   <title>Leveraging Open Data and Models to Reduce Aviation’s Climate Footprint</title>
@@ -17,9 +17,6 @@
   <link rel="stylesheet" href="lecture_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="lecture_files/libs/revealjs/dist/reveal.css">
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -98,7 +95,8 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="lecture_files/libs/revealjs/dist/theme/quarto-91c2ade0b61b616164e98aaf75b60ade.css">
+  <link rel="stylesheet" href="lecture_files/libs/revealjs/dist/theme/quarto-84d3e0a8dead53d46c2fe2d81aad872d.css">
+  <link rel="stylesheet" href="styles/title-overrides.css">
   <link href="lecture_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="lecture_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="lecture_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -278,7 +276,7 @@ Junzi Sun · TU Delft
 <section id="what-is-runnable-in-this-lecture" class="slide level2 code">
 <h2>What is runnable in this lecture?</h2>
 <p>The code slides use cached sample data so the lecture can render without OpenSky credentials or large weather downloads.</p>
-<div id="976bf668" class="cell" data-execution_count="2">
+<div id="c9e0c20e" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb1-2"><a href=""></a><span class="im">import</span> sys</span>
 <span id="cb1-3"><a href=""></a></span>
@@ -450,7 +448,7 @@ Junzi Sun · TU Delft
 <div class="two-col">
 <div>
 <p><strong>Live state vectors: REST</strong></p>
-<div id="24f2459c" class="cell" data-execution_count="3">
+<div id="5a235d1b" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">from</span> pyopensky.rest <span class="im">import</span> REST</span>
 <span id="cb2-2"><a href=""></a></span>
 <span id="cb2-3"><a href=""></a>rest <span class="op">=</span> REST()</span>
@@ -460,7 +458,7 @@ Junzi Sun · TU Delft
 </div>
 <div>
 <p><strong>Historical state vectors: Trino</strong></p>
-<div id="52205f77" class="cell" data-execution_count="4">
+<div id="f13afb0c" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">from</span> pyopensky.trino <span class="im">import</span> Trino</span>
 <span id="cb3-2"><a href=""></a></span>
 <span id="cb3-3"><a href=""></a>trino <span class="op">=</span> Trino()</span>
@@ -491,7 +489,7 @@ Junzi Sun · TU Delft
 <section id="load-and-inspect-one-trajectory" class="slide level2 code">
 <h2>Load and inspect one trajectory</h2>
 <p>Start with one cached OpenSky flight so the rest of the lecture can run without credentials or a live database query.</p>
-<div id="25deeff5" class="cell" data-execution_count="5">
+<div id="33a95eab" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a>flight <span class="op">=</span> load_sample_flight()</span>
 <span id="cb4-2"><a href=""></a>flight.shape, flight.timestamp.<span class="bu">min</span>(), flight.timestamp.<span class="bu">max</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -500,7 +498,7 @@ Junzi Sun · TU Delft
  Timestamp('2018-01-02 21:48:00+0000', tz='UTC'))</code></pre>
 </div>
 </div>
-<div id="34a6757a" class="cell" data-execution_count="6">
+<div id="b02af6d2" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a>flight.phase.value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>phase
@@ -515,7 +513,7 @@ Name: count, dtype: int64</code></pre>
 <h2>Trajectory geometry and vertical behavior</h2>
 <div class="two-col">
 <div>
-<div id="373d990b" class="cell" data-fig-height="3.9" data-fig-width="5.8" data-execution_count="7">
+<div id="d013ad5b" class="cell" data-fig-height="3.9" data-fig-width="5.8" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a><span class="im">from</span> isa_demo <span class="im">import</span> plot_trajectory</span>
 <span id="cb8-2"><a href=""></a></span>
 <span id="cb8-3"><a href=""></a>plot_trajectory(flight)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -529,7 +527,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <div>
-<div id="f84469ed" class="cell" data-fig-height="3.9" data-fig-width="5.8" data-execution_count="8">
+<div id="d306127b" class="cell" data-fig-height="3.9" data-fig-width="5.8" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href=""></a><span class="im">from</span> isa_demo <span class="im">import</span> plot_vertical_profile</span>
 <span id="cb9-2"><a href=""></a></span>
 <span id="cb9-3"><a href=""></a>plot_vertical_profile(flight)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -637,7 +635,7 @@ Name: count, dtype: int64</code></pre>
 <p>OpenAP exposes the aircraft limits and default engine used by the performance model; these values define the mass range behind fuel, emissions, and trajectory predictions.</p>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div id="60e86b0d" class="cell" data-execution_count="9">
+<div id="f0de53a2" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a><span class="im">import</span> openap</span>
 <span id="cb10-2"><a href=""></a></span>
 <span id="cb10-3"><a href=""></a>aircraft <span class="op">=</span> openap.prop.aircraft(<span class="st">"A319"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -659,7 +657,7 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="fuel-and-emissions-from-a-trajectory" class="slide level2 code">
 <h2>Fuel and emissions from a trajectory</h2>
-<div id="9e1aaa29" class="cell" data-execution_count="10">
+<div id="89876792" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href=""></a><span class="im">from</span> isa_demo <span class="im">import</span> compute_openap_emissions</span>
 <span id="cb11-2"><a href=""></a></span>
 <span id="cb11-3"><a href=""></a>flight_perf <span class="op">=</span> compute_openap_emissions(flight)</span>
@@ -753,7 +751,7 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="emission-estimate-along-the-flight" class="slide level2 code">
 <h2>Emission estimate along the flight</h2>
-<div id="8575f706" class="cell" data-execution_count="11">
+<div id="ea3fda54" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href=""></a>totals <span class="op">=</span> flight_perf[[<span class="st">"fuel_kg"</span>, <span class="st">"co2_kg"</span>, <span class="st">"nox_g"</span>]].<span class="bu">sum</span>()</span>
 <span id="cb12-2"><a href=""></a>totals.<span class="bu">round</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
@@ -763,7 +761,7 @@ nox_g      60650.1
 dtype: float64</code></pre>
 </div>
 </div>
-<div id="084ee8fc" class="cell" data-execution_count="12">
+<div id="4f23e7c2" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href=""></a><span class="im">from</span> isa_demo <span class="im">import</span> plot_emission_timeseries</span>
 <span id="cb14-2"><a href=""></a></span>
 <span id="cb14-3"><a href=""></a>plot_emission_timeseries(flight_perf)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -891,7 +889,7 @@ dtype: float64</code></pre>
 <section id="add-real-weather-with-fastmeteo" class="slide level2 code">
 <h2>Add real weather with FastMeteo</h2>
 <p>Use the example flight from the FastMeteo paper workflow. The paper notebook used <code>Grid</code>; the current API uses <code>ArcoEra5</code>.</p>
-<div id="2233c7ea" class="cell" data-execution_count="13">
+<div id="0ccfdebd" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb15-2"><a href=""></a><span class="im">from</span> fastmeteo.source <span class="im">import</span> ArcoEra5</span>
 <span id="cb15-3"><a href=""></a></span>
@@ -908,7 +906,7 @@ dtype: float64</code></pre>
 <h2>Diagnose contrail regions with OpenAP</h2>
 <div class="two-col wide-right">
 <div>
-<div id="6c671dfa" class="cell" data-execution_count="14">
+<div id="6e275bb0" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href=""></a><span class="im">from</span> openap <span class="im">import</span> aero, contrail</span>
 <span id="cb16-2"><a href=""></a></span>
 <span id="cb16-3"><a href=""></a>flight_contrail <span class="op">=</span> flight_weather.assign(</span>
@@ -1044,7 +1042,7 @@ dtype: float64</code></pre>
 <h2>Climate objective in opentop</h2>
 <p>The weather-derived cost grid from the previous slide becomes <code>df_cost</code>. The optimizer then balances gridded contrail cost against CO2 from fuel burn.</p>
 <p>This cell is disabled here because the full grid solve is too heavy for a lecture render.</p>
-<div id="1449cf70" class="cell" data-execution_count="15">
+<div id="242ff411" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href=""></a><span class="im">import</span> openap</span>
 <span id="cb17-2"><a href=""></a><span class="im">import</span> opentop <span class="im">as</span> top</span>
 <span id="cb17-3"><a href=""></a></span>
