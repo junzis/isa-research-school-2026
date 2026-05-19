@@ -50,7 +50,7 @@ Is it possible to use only open data to study aircraft performance, simulate tra
 - Today’s lecture is about how that stack becomes a climate-impact workflow.
 :::
 
-## Why _openness_ matters in climate mitigation {.regular}
+## Why openness matters in aviation climate research {.regular}
 
 ::: {.two-col}
 :::{.compact}
