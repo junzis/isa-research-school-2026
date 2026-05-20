@@ -65,7 +65,7 @@ plt.rcParams.update({
 Objective: understand how open aviation data, performance models, weather data, and optimization can be combined into a reproducible workflow for reducing aviation climate impact.
 :::
 
-## The question that started this work {.regular}
+## The question that started this line of research {.regular}
 
 ::: {.callout}
 Is it possible to use only open data to study aircraft performance, simulate trajectories, infer fuel burn, and estimate emissions?
@@ -325,29 +325,12 @@ Paper: <https://doi.org/10.59490/joas.2025.8252>
 
 OpenAP exposes the aircraft limits and default engine used by the performance model; these values define the mass range behind fuel, emissions, and trajectory predictions.
 
-:::: {.columns}
-::: {.column width="48%"}
 ```{python}
 import openap
 
 aircraft = openap.prop.aircraft("A319")
+aircraft
 ```
-:::
-
-::: {.column width="52%"}
-::: {.compact .model-record}
-**A319 model record**
-
-- Aircraft: Airbus A319
-- Mass: OEW 40.8 t, MLW 62.5 t, MTOW 75.5 t
-- Limits: VMO 350 kt, MMO 0.82, ceiling 12.5 km
-- Geometry: wing area 124 m2, span 35.8 m
-- Engine: 2 x V2524-A5
-- Drag polar: CD0 0.020, k 0.039, e 0.783
-- Fuel coefficient: 2.3336
-:::
-:::
-::::
 
 ## Fuel and emissions from a trajectory {.code}
 

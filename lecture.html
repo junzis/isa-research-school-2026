@@ -275,8 +275,8 @@ Junzi Sun · TU Delft
 </div>
 </div>
 </section>
-<section id="the-question-that-started-this-work" class="slide level2 regular">
-<h2>The question that started this work</h2>
+<section id="the-question-that-started-this-line-of-research" class="slide level2 regular">
+<h2>The question that started this line of research</h2>
 <div class="callout callout-none no-icon callout-style-simple">
 <div class="callout-body">
 <div class="callout-content">
@@ -322,7 +322,7 @@ Junzi Sun · TU Delft
 <section id="what-is-runnable-in-this-lecture" class="slide level2 code">
 <h2>What is runnable in this lecture?</h2>
 <p>The code slides use cached sample data so the lecture can render without OpenSky credentials or large weather downloads.</p>
-<div id="faff2081" class="cell" data-execution_count="2">
+<div id="7749846c" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb1-2"><a href=""></a><span class="im">import</span> sys</span>
 <span id="cb1-3"><a href=""></a></span>
@@ -494,7 +494,7 @@ Junzi Sun · TU Delft
 <div class="two-col">
 <div>
 <p><strong>Live state vectors: REST</strong></p>
-<div id="9ee8a0eb" class="cell" data-execution_count="3">
+<div id="cd114bfe" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">from</span> pyopensky.rest <span class="im">import</span> REST</span>
 <span id="cb2-2"><a href=""></a></span>
 <span id="cb2-3"><a href=""></a>rest <span class="op">=</span> REST()</span>
@@ -504,7 +504,7 @@ Junzi Sun · TU Delft
 </div>
 <div>
 <p><strong>Historical state vectors: Trino</strong></p>
-<div id="b0c56fca" class="cell" data-execution_count="4">
+<div id="35522d1d" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">from</span> pyopensky.trino <span class="im">import</span> Trino</span>
 <span id="cb3-2"><a href=""></a></span>
 <span id="cb3-3"><a href=""></a>trino <span class="op">=</span> Trino()</span>
@@ -535,7 +535,7 @@ Junzi Sun · TU Delft
 <section id="load-and-inspect-one-trajectory" class="slide level2 code">
 <h2>Load and inspect one trajectory</h2>
 <p>Start with one cached OpenSky flight so the rest of the lecture can run without credentials or a live database query.</p>
-<div id="80e7e605" class="cell" data-execution_count="5">
+<div id="6aef15f1" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a>flight <span class="op">=</span> load_sample_flight()</span>
 <span id="cb4-2"><a href=""></a>flight.shape, flight.timestamp.<span class="bu">min</span>(), flight.timestamp.<span class="bu">max</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -544,7 +544,7 @@ Junzi Sun · TU Delft
  Timestamp('2018-01-02 21:48:00+0000', tz='UTC'))</code></pre>
 </div>
 </div>
-<div id="6b6b6cde" class="cell" data-execution_count="6">
+<div id="2b8e94a9" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a>flight.phase.value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>phase
@@ -559,7 +559,7 @@ Name: count, dtype: int64</code></pre>
 <h2>Trajectory geometry and vertical behavior</h2>
 <div class="two-col">
 <div>
-<div id="62ca5bbe" class="cell" data-fig-height="3.9" data-fig-width="5.8" data-execution_count="7">
+<div id="dc7c6044" class="cell" data-fig-height="3.9" data-fig-width="5.8" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a><span class="im">from</span> isa_demo <span class="im">import</span> plot_trajectory</span>
 <span id="cb8-2"><a href=""></a></span>
 <span id="cb8-3"><a href=""></a>plot_trajectory(flight)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -573,7 +573,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <div>
-<div id="d2291e0f" class="cell" data-fig-height="3.9" data-fig-width="5.8" data-execution_count="8">
+<div id="713b453a" class="cell" data-fig-height="3.9" data-fig-width="5.8" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href=""></a><span class="im">from</span> isa_demo <span class="im">import</span> plot_vertical_profile</span>
 <span id="cb9-2"><a href=""></a></span>
 <span id="cb9-3"><a href=""></a>plot_vertical_profile(flight)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -679,35 +679,61 @@ Name: count, dtype: int64</code></pre>
 <section id="aircraft-model-inputs-for-mass-and-emissions" class="slide level2 code">
 <h2>Aircraft model inputs for mass and emissions</h2>
 <p>OpenAP exposes the aircraft limits and default engine used by the performance model; these values define the mass range behind fuel, emissions, and trajectory predictions.</p>
-<div class="columns">
-<div class="column" style="width:48%;">
-<div id="7fcdfb9e" class="cell" data-execution_count="9">
+<div id="dade40d0" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a><span class="im">import</span> openap</span>
 <span id="cb10-2"><a href=""></a></span>
-<span id="cb10-3"><a href=""></a>aircraft <span class="op">=</span> openap.prop.aircraft(<span class="st">"A319"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-3"><a href=""></a>aircraft <span class="op">=</span> openap.prop.aircraft(<span class="st">"A319"</span>)</span>
+<span id="cb10-4"><a href=""></a>aircraft</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>{'aircraft': 'Airbus A319',
+ 'mtow': 75500,
+ 'mlw': 62500,
+ 'oew': 40800,
+ 'mfc': 30190,
+ 'vmo': 350,
+ 'mmo': 0.82,
+ 'ceiling': 12500,
+ 'pax': {'max': 156, 'low': 110, 'high': 140},
+ 'fuselage': {'length': 33.84, 'height': 4.14, 'width': 3.95},
+ 'wing': {'area': 124, 'span': 35.8, 'mac': 4.1935, 'sweep': 25, 't/c': None},
+ 'flaps': {'type': 'single-slotted',
+  'area': 21.1,
+  'bf/b': 0.78,
+  'lambda_f': 0.9,
+  'cf/c': 0.176,
+  'Sf/S': 0.17},
+ 'cruise': {'height': 11000, 'mach': 0.78, 'range': 3300},
+ 'engine': {'type': 'turbofan',
+  'mount': 'wing',
+  'number': 2,
+  'default': 'V2524-A5',
+  'options': {'A319-111': 'CFM56-5B5',
+   'A319-112': 'CFM56-5B6',
+   'A319-113': 'CFM56-5A4',
+   'A319-114': 'CFM56-5A5',
+   'A319-115': 'CFM56-5B7',
+   'A319-131': 'V2522-A5',
+   'A319-132': 'V2524-A5',
+   'A319-133': 'V2527M-A5'}},
+ 'drag': {'cd0': 0.02, 'k': 0.039, 'e': 0.783, 'gears': 0.017},
+ 'fuel': {'engine': 'V2524-A5', 'fuel_coef': 2.33357287},
+ 'limits': {'MTOW': 75500,
+  'MLW': 62500,
+  'OEW': 40800,
+  'MFC': 30190,
+  'VMO': 350,
+  'MMO': 0.82,
+  'ceiling': 12500}}</code></pre>
 </div>
-</div><div class="column" style="width:52%;">
-<div class="compact model-record">
-<p><strong>A319 model record</strong></p>
-<ul>
-<li>Aircraft: Airbus A319</li>
-<li>Mass: OEW 40.8 t, MLW 62.5 t, MTOW 75.5 t</li>
-<li>Limits: VMO 350 kt, MMO 0.82, ceiling 12.5 km</li>
-<li>Geometry: wing area 124 m2, span 35.8 m</li>
-<li>Engine: 2 x V2524-A5</li>
-<li>Drag polar: CD0 0.020, k 0.039, e 0.783</li>
-<li>Fuel coefficient: 2.3336</li>
-</ul>
 </div>
-</div></div>
 </section>
 <section id="fuel-and-emissions-from-a-trajectory" class="slide level2 code">
 <h2>Fuel and emissions from a trajectory</h2>
-<div id="ad61d327" class="cell" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href=""></a><span class="im">from</span> isa_demo <span class="im">import</span> compute_openap_emissions</span>
-<span id="cb11-2"><a href=""></a></span>
-<span id="cb11-3"><a href=""></a>flight_perf <span class="op">=</span> compute_openap_emissions(flight)</span>
-<span id="cb11-4"><a href=""></a>flight_perf[[<span class="st">"elapsed_min"</span>, <span class="st">"altitude"</span>, <span class="st">"groundspeed"</span>, <span class="st">"fuel_flow_kg_s"</span>, <span class="st">"fuel_kg"</span>, <span class="st">"co2_kg"</span>, <span class="st">"nox_g"</span>]].head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="c6b216c9" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href=""></a><span class="im">from</span> isa_demo <span class="im">import</span> compute_openap_emissions</span>
+<span id="cb12-2"><a href=""></a></span>
+<span id="cb12-3"><a href=""></a>flight_perf <span class="op">=</span> compute_openap_emissions(flight)</span>
+<span id="cb12-4"><a href=""></a>flight_perf[[<span class="st">"elapsed_min"</span>, <span class="st">"altitude"</span>, <span class="st">"groundspeed"</span>, <span class="st">"fuel_flow_kg_s"</span>, <span class="st">"fuel_kg"</span>, <span class="st">"co2_kg"</span>, <span class="st">"nox_g"</span>]].head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 <style scoped="">
@@ -797,9 +823,9 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="emission-estimate-along-the-flight" class="slide level2 code">
 <h2>Emission estimate along the flight</h2>
-<div id="ea961a3b" class="cell" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href=""></a>totals <span class="op">=</span> flight_perf[[<span class="st">"fuel_kg"</span>, <span class="st">"co2_kg"</span>, <span class="st">"nox_g"</span>]].<span class="bu">sum</span>()</span>
-<span id="cb12-2"><a href=""></a>totals.<span class="bu">round</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="74baade7" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href=""></a>totals <span class="op">=</span> flight_perf[[<span class="st">"fuel_kg"</span>, <span class="st">"co2_kg"</span>, <span class="st">"nox_g"</span>]].<span class="bu">sum</span>()</span>
+<span id="cb13-2"><a href=""></a>totals.<span class="bu">round</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>fuel_kg     4789.0
 co2_kg     15133.4
@@ -807,10 +833,10 @@ nox_g      60650.1
 dtype: float64</code></pre>
 </div>
 </div>
-<div id="fa2ed890" class="cell" data-execution_count="12">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href=""></a><span class="im">from</span> isa_demo <span class="im">import</span> plot_emission_timeseries</span>
-<span id="cb14-2"><a href=""></a></span>
-<span id="cb14-3"><a href=""></a>plot_emission_timeseries(flight_perf)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="b2cdb542" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href=""></a><span class="im">from</span> isa_demo <span class="im">import</span> plot_emission_timeseries</span>
+<span id="cb15-2"><a href=""></a></span>
+<span id="cb15-3"><a href=""></a>plot_emission_timeseries(flight_perf)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <div>
 <figure>
@@ -935,40 +961,40 @@ dtype: float64</code></pre>
 <section id="add-real-weather-with-fastmeteo" class="slide level2 code">
 <h2>Add real weather with FastMeteo</h2>
 <p>Use the example flight from the FastMeteo paper workflow. The paper notebook used <code>Grid</code>; the current API uses <code>ArcoEra5</code>.</p>
-<div id="e1c3d03d" class="cell" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb15-2"><a href=""></a><span class="im">from</span> fastmeteo.source <span class="im">import</span> ArcoEra5</span>
-<span id="cb15-3"><a href=""></a></span>
-<span id="cb15-4"><a href=""></a>flight <span class="op">=</span> pd.read_csv(</span>
-<span id="cb15-5"><a href=""></a>    <span class="st">"assets/fastmeteo_example_flight.csv"</span>,</span>
-<span id="cb15-6"><a href=""></a>    parse_dates<span class="op">=</span>[<span class="st">"timestamp"</span>],</span>
-<span id="cb15-7"><a href=""></a>)</span>
-<span id="cb15-8"><a href=""></a></span>
-<span id="cb15-9"><a href=""></a>era5 <span class="op">=</span> ArcoEra5(local_store<span class="op">=</span><span class="st">"/tmp/era5-zarr"</span>)</span>
-<span id="cb15-10"><a href=""></a>flight_weather <span class="op">=</span> era5.interpolate(flight)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="ab2b701e" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb16-2"><a href=""></a><span class="im">from</span> fastmeteo.source <span class="im">import</span> ArcoEra5</span>
+<span id="cb16-3"><a href=""></a></span>
+<span id="cb16-4"><a href=""></a>flight <span class="op">=</span> pd.read_csv(</span>
+<span id="cb16-5"><a href=""></a>    <span class="st">"assets/fastmeteo_example_flight.csv"</span>,</span>
+<span id="cb16-6"><a href=""></a>    parse_dates<span class="op">=</span>[<span class="st">"timestamp"</span>],</span>
+<span id="cb16-7"><a href=""></a>)</span>
+<span id="cb16-8"><a href=""></a></span>
+<span id="cb16-9"><a href=""></a>era5 <span class="op">=</span> ArcoEra5(local_store<span class="op">=</span><span class="st">"/tmp/era5-zarr"</span>)</span>
+<span id="cb16-10"><a href=""></a>flight_weather <span class="op">=</span> era5.interpolate(flight)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="diagnose-contrail-regions-with-openap" class="slide level2 code">
 <h2>Diagnose contrail regions with OpenAP</h2>
 <div class="two-col wide-right">
 <div>
-<div id="c03614f7" class="cell" data-execution_count="14">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href=""></a><span class="im">from</span> openap <span class="im">import</span> aero, contrail</span>
-<span id="cb16-2"><a href=""></a></span>
-<span id="cb16-3"><a href=""></a>flight_contrail <span class="op">=</span> flight_weather.assign(</span>
-<span id="cb16-4"><a href=""></a>    rhi<span class="op">=</span><span class="kw">lambda</span> d: contrail.relative_humidity(</span>
-<span id="cb16-5"><a href=""></a>        d.specific_humidity,</span>
-<span id="cb16-6"><a href=""></a>        aero.pressure(d.altitude <span class="op">*</span> aero.ft),</span>
-<span id="cb16-7"><a href=""></a>        d.temperature,</span>
-<span id="cb16-8"><a href=""></a>        to<span class="op">=</span><span class="st">"ice"</span>,</span>
-<span id="cb16-9"><a href=""></a>    ),</span>
-<span id="cb16-10"><a href=""></a>    crit_temp<span class="op">=</span><span class="kw">lambda</span> d: contrail.critical_temperature_water(</span>
-<span id="cb16-11"><a href=""></a>        aero.pressure(d.altitude <span class="op">*</span> aero.ft)</span>
-<span id="cb16-12"><a href=""></a>    ),</span>
-<span id="cb16-13"><a href=""></a>    sac<span class="op">=</span><span class="kw">lambda</span> d: d.temperature <span class="op">&lt;</span> d.crit_temp,</span>
-<span id="cb16-14"><a href=""></a>    issr<span class="op">=</span><span class="kw">lambda</span> d: d.rhi <span class="op">&gt;</span> <span class="dv">1</span>,</span>
-<span id="cb16-15"><a href=""></a>    persistent<span class="op">=</span><span class="kw">lambda</span> d: d.sac <span class="op">&amp;</span> d.issr,</span>
-<span id="cb16-16"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="b94e29d8" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href=""></a><span class="im">from</span> openap <span class="im">import</span> aero, contrail</span>
+<span id="cb17-2"><a href=""></a></span>
+<span id="cb17-3"><a href=""></a>flight_contrail <span class="op">=</span> flight_weather.assign(</span>
+<span id="cb17-4"><a href=""></a>    rhi<span class="op">=</span><span class="kw">lambda</span> d: contrail.relative_humidity(</span>
+<span id="cb17-5"><a href=""></a>        d.specific_humidity,</span>
+<span id="cb17-6"><a href=""></a>        aero.pressure(d.altitude <span class="op">*</span> aero.ft),</span>
+<span id="cb17-7"><a href=""></a>        d.temperature,</span>
+<span id="cb17-8"><a href=""></a>        to<span class="op">=</span><span class="st">"ice"</span>,</span>
+<span id="cb17-9"><a href=""></a>    ),</span>
+<span id="cb17-10"><a href=""></a>    crit_temp<span class="op">=</span><span class="kw">lambda</span> d: contrail.critical_temperature_water(</span>
+<span id="cb17-11"><a href=""></a>        aero.pressure(d.altitude <span class="op">*</span> aero.ft)</span>
+<span id="cb17-12"><a href=""></a>    ),</span>
+<span id="cb17-13"><a href=""></a>    sac<span class="op">=</span><span class="kw">lambda</span> d: d.temperature <span class="op">&lt;</span> d.crit_temp,</span>
+<span id="cb17-14"><a href=""></a>    issr<span class="op">=</span><span class="kw">lambda</span> d: d.rhi <span class="op">&gt;</span> <span class="dv">1</span>,</span>
+<span id="cb17-15"><a href=""></a>    persistent<span class="op">=</span><span class="kw">lambda</span> d: d.sac <span class="op">&amp;</span> d.issr,</span>
+<span id="cb17-16"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div>
@@ -1088,21 +1114,21 @@ dtype: float64</code></pre>
 <h2>Climate objective in opentop</h2>
 <p>The weather-derived cost grid from the previous slide becomes <code>df_cost</code>. The optimizer then balances gridded contrail cost against CO2 from fuel burn.</p>
 <p>This cell is disabled here because the full grid solve is too heavy for a lecture render.</p>
-<div id="1165f381" class="cell" data-execution_count="15">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href=""></a><span class="im">import</span> openap</span>
-<span id="cb17-2"><a href=""></a><span class="im">import</span> opentop <span class="im">as</span> top</span>
-<span id="cb17-3"><a href=""></a></span>
-<span id="cb17-4"><a href=""></a>optimizer <span class="op">=</span> top.Cruise(<span class="st">"A320"</span>, <span class="st">"EHAM"</span>, <span class="st">"LGAV"</span>, m0<span class="op">=</span><span class="fl">0.85</span>)</span>
-<span id="cb17-5"><a href=""></a>flight_fuel_optimal <span class="op">=</span> optimizer.trajectory(objective<span class="op">=</span><span class="st">"fuel"</span>)</span>
-<span id="cb17-6"><a href=""></a>interpolant <span class="op">=</span> top.tools.interpolant_from_dataframe(df_cost)</span>
-<span id="cb17-7"><a href=""></a></span>
-<span id="cb17-8"><a href=""></a><span class="kw">def</span> objective(x, u, dt, <span class="op">**</span>kwargs):</span>
-<span id="cb17-9"><a href=""></a>    vtas <span class="op">=</span> openap.casadi.aero.mach2tas(u[<span class="dv">0</span>], x[<span class="dv">2</span>])</span>
-<span id="cb17-10"><a href=""></a>    contrail_cost <span class="op">=</span> optimizer.obj_grid_cost(</span>
-<span id="cb17-11"><a href=""></a>        x, u, dt, n_dim<span class="op">=</span><span class="dv">3</span>, time_dependent<span class="op">=</span><span class="va">False</span>, <span class="op">**</span>kwargs</span>
-<span id="cb17-12"><a href=""></a>    ) <span class="op">*</span> vtas <span class="op">*</span> <span class="fl">1e-3</span></span>
-<span id="cb17-13"><a href=""></a>    co2_cost <span class="op">=</span> optimizer.obj_fuel(x, u, dt, <span class="op">**</span>kwargs) <span class="op">*</span> <span class="fl">7.03e-15</span></span>
-<span id="cb17-14"><a href=""></a>    <span class="cf">return</span> contrail_cost <span class="op">+</span> co2_cost</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="59406cac" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href=""></a><span class="im">import</span> openap</span>
+<span id="cb18-2"><a href=""></a><span class="im">import</span> opentop <span class="im">as</span> top</span>
+<span id="cb18-3"><a href=""></a></span>
+<span id="cb18-4"><a href=""></a>optimizer <span class="op">=</span> top.Cruise(<span class="st">"A320"</span>, <span class="st">"EHAM"</span>, <span class="st">"LGAV"</span>, m0<span class="op">=</span><span class="fl">0.85</span>)</span>
+<span id="cb18-5"><a href=""></a>flight_fuel_optimal <span class="op">=</span> optimizer.trajectory(objective<span class="op">=</span><span class="st">"fuel"</span>)</span>
+<span id="cb18-6"><a href=""></a>interpolant <span class="op">=</span> top.tools.interpolant_from_dataframe(df_cost)</span>
+<span id="cb18-7"><a href=""></a></span>
+<span id="cb18-8"><a href=""></a><span class="kw">def</span> objective(x, u, dt, <span class="op">**</span>kwargs):</span>
+<span id="cb18-9"><a href=""></a>    vtas <span class="op">=</span> openap.casadi.aero.mach2tas(u[<span class="dv">0</span>], x[<span class="dv">2</span>])</span>
+<span id="cb18-10"><a href=""></a>    contrail_cost <span class="op">=</span> optimizer.obj_grid_cost(</span>
+<span id="cb18-11"><a href=""></a>        x, u, dt, n_dim<span class="op">=</span><span class="dv">3</span>, time_dependent<span class="op">=</span><span class="va">False</span>, <span class="op">**</span>kwargs</span>
+<span id="cb18-12"><a href=""></a>    ) <span class="op">*</span> vtas <span class="op">*</span> <span class="fl">1e-3</span></span>
+<span id="cb18-13"><a href=""></a>    co2_cost <span class="op">=</span> optimizer.obj_fuel(x, u, dt, <span class="op">**</span>kwargs) <span class="op">*</span> <span class="fl">7.03e-15</span></span>
+<span id="cb18-14"><a href=""></a>    <span class="cf">return</span> contrail_cost <span class="op">+</span> co2_cost</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="fuel-versus-contrail-trade-off" class="slide level2 regular">
