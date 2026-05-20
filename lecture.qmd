@@ -25,6 +25,21 @@ plt.rcParams.update({
 })
 ```
 
+## My research context {.regular}
+
+::: {.two-col .research-context}
+:::{.compact}
+- **Open data infrastructure:** aircraft surveillance, OpenSky, pyModeS, pyopensky, FastMeteo.
+- **Performance and AI models:** OpenAP, trajectory prediction, weather reconstruction, contrail detection.
+- **Flight optimization:** trajectory generation, fuel and climate objectives, operational constraints.
+- **Sustainability impact:** emissions, contrails, capacity, and decision support for lower-impact operations.
+:::
+
+::: {.img-tight}
+![ADS-B, Mode S, and VHF receiver setup on the AE building roof](assets/uhd_receivers.png)
+:::
+:::
+
 ## Overview {.regular}
 
 ::: {.compact}

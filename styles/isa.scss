@@ -167,6 +167,15 @@ $link-color: #0076a8;
   grid-template-columns: 0.78fr 1.22fr;
 }
 
+.research-context {
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+}
+
+.research-context img {
+  max-height: 520px !important;
+}
+
 .three-col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

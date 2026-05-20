@@ -29,6 +29,15 @@
   line-height: 1.18;
 }
 
+.research-context {
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+}
+
+.research-context img {
+  max-height: 520px !important;
+}
+
 .stack-diagram {
   font-size: 0.64em;
   gap: 0.5rem;
