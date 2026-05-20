@@ -52,7 +52,7 @@ plt.rcParams.update({
 :::
 :::
 
-## Overview {.regular}
+## Overview of this lecture {.regular}
 
 ::: {.compact}
 1. **Open flight data:** turn surveillance data into cleaned trajectories for climate analysis.
@@ -115,11 +115,6 @@ versioned code, open assumptions, reproducible figures
 The code slides use cached sample data so the lecture can render without OpenSky credentials or large weather downloads.
 
 ```{python}
-from pathlib import Path
-import sys
-
-sys.path.insert(0, str(Path("scripts").resolve()))
-
 from isa_demo import load_sample_flight
 
 flight = load_sample_flight()
