@@ -38,6 +38,18 @@
   max-height: 520px !important;
 }
 
+.context-figure {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.context-figure img {
+  max-height: 610px !important;
+  max-width: 94% !important;
+  width: auto;
+}
+
 .stack-diagram {
   font-size: 0.64em;
   gap: 0.5rem;

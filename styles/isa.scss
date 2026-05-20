@@ -176,6 +176,18 @@ $link-color: #0076a8;
   max-height: 520px !important;
 }
 
+.context-figure {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.context-figure img {
+  max-height: 610px !important;
+  max-width: 94% !important;
+  width: auto;
+}
+
 .three-col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
