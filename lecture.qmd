@@ -28,17 +28,13 @@ plt.rcParams.update({
 ## Background and context: aviation decarbonization {.regular}
 
 ::: {.context-figure}
-![EUROCONTROL roadmap to net-zero aviation by 2050](assets/uhd_eurocontrol_roadmap_2050.svg)
-:::
-
-::: {.source}
-EUROCONTROL aviation sustainability roadmap
+![EUROCONTROL roadmap to net-zero aviation by 2050](assets/uhd_eurocontrol_roadmap_2050.svg){.context-img .context-img-wide}
 :::
 
 ## Background and context: operational efficiency {.regular}
 
 ::: {.context-figure}
-![Extra fuel burn from operational inefficiencies](assets/uhd_eurocontrol_extra_fuel.png)
+![Extra fuel burn from operational inefficiencies](assets/uhd_eurocontrol_extra_fuel.png){.context-img}
 :::
 
 ## My research context {.regular}

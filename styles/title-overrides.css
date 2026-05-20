@@ -39,15 +39,31 @@
 }
 
 .context-figure {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   width: 100%;
 }
 
 .context-figure img {
-  max-height: 610px !important;
-  max-width: 94% !important;
+  max-height: 680px !important;
+  max-width: 98% !important;
   width: auto;
+}
+
+.context-figure figure {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.context-figure figcaption {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: fit-content;
+}
+
+.context-img-wide {
+  width: 98% !important;
 }
 
 .stack-diagram {
