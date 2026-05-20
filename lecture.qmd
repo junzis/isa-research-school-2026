@@ -37,7 +37,7 @@ plt.rcParams.update({
 ![Extra fuel burn from operational inefficiencies](assets/uhd_eurocontrol_extra_fuel.png){.context-img}
 :::
 
-## My research context {.regular}
+## The research context {.regular}
 
 ::: {.two-col .research-context}
 :::{.compact}
@@ -332,12 +332,67 @@ aircraft = openap.prop.aircraft("A319")
 aircraft
 ```
 
+## Reminder: the example flight {.regular}
+
+Before estimating fuel and emissions, return to the same A319 trajectory used in the data section.
+
+:::: {.columns .flight-reminder}
+::: {.column width="50%"}
+```{python}
+#| echo: false
+plot_trajectory(flight)
+```
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: false
+plot_vertical_profile(flight)
+```
+:::
+::::
+
 ## Fuel and emissions from a trajectory {.code}
 
 ```{python}
-from isa_demo import compute_openap_emissions
+import pandas as pd
+import openap
 
-flight_perf = compute_openap_emissions(flight)
+fuelflow = openap.FuelFlow("A319")
+emission = openap.Emission("A319")
+
+mass = 62_000.0
+rows = []
+
+for point in flight.itertuples(index=False):
+    ff = float(
+        fuelflow.enroute(
+            mass=mass,
+            tas=point.groundspeed,
+            alt=point.altitude,
+            vs=float(point.vertical_rate),
+        )
+    )
+    fuel = ff * point.dt_s
+    rows.append(
+        {
+            "fuel_flow_kg_s": ff,
+            "fuel_kg": fuel,
+            "co2_kg": float(emission.co2(ff) * point.dt_s / 1000.0),
+            "nox_g": float(
+                emission.nox(
+                    ff,
+                    tas=point.groundspeed,
+                    alt=point.altitude,
+                )
+                * point.dt_s
+            ),
+        }
+    )
+    mass -= fuel
+
+flight_perf = flight.join(pd.DataFrame(rows, index=flight.index))
+flight_perf["mass_kg"] = 62_000 - flight_perf["fuel_kg"].cumsum()
 flight_perf[["elapsed_min", "altitude", "groundspeed", "fuel_flow_kg_s", "fuel_kg", "co2_kg", "nox_g"]].head()
 ```
 

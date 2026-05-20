@@ -357,6 +357,10 @@ $link-color: #0076a8;
   width: auto;
 }
 
+.flight-reminder .cell-output-display img {
+  max-height: 545px !important;
+}
+
 .flow-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
